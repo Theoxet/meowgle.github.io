@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowgle</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* TOP BAR */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 25px;
+            font-size: 14px;
+        }
+        .top a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #202124;
+        }
+        .top a:hover { text-decoration: underline; }
+        .top-right img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+        /* MIDDLE */
+        .middle {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            width: 300px;
+            margin-bottom: 30px;
+        }
+        form {
+            width: 100%;
+            max-width: 600px;
+        }
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 14px 50px;
+            border-radius: 24px;
+            border: 1px solid #dfe1e5;
+            font-size: 16px;
+        }
+        .search-box input:hover,
+        .search-box input:focus {
+            outline: none;
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+        }
+        .icon-left, .icon-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            opacity: 0.6;
+        }
+        .icon-left { left: 18px; }
+        .icon-right { right: 18px; }
+        .buttons {
+            margin-top: 25px;
+            text-align: center;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            background: #f8f9fa;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            border: 1px solid #dadce0;
+        }
+        /* FOOTER */
+        .bottom {
+            background: #f2f2f2;
+            padding: 15px 25px;
+            font-size: 14px;
+        }
+        .bottom a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #70757a;
+        }
+        .bottom a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP -->
+    <div class="top">
+        <div class="top-left">
+            <a href="https://about.google/">About</a>
+            <a href="https://store.google.com">Store</a>
+        </div>
+        <div class="top-right">
+            <a href="https://mail.google.com">Gmail</a>
+            <a href="https://www.google.com/imghp">Images</a>
+            <img src="./images/cute_little_cat.jpg" alt="Profile">
+        </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="middle">
+        <img src="./images/meowgle_logo.png" class="logo" alt="Meowgle logo">
+
+        <!-- GOOGLE SEARCH -->
+        <form action="https://www.google.com/search" method="GET">
+            <div class="search-box">
+                <img src="./images/search.jpg" class="icon-left">
+                <input type="text" name="q" placeholder="Search Meowgle or type a URL">
+                <img src="./images/mic.webp" class="icon-right" style="right:50px">
+                <img src="./images/cam.jpg" class="icon-right">
+            </div>
+            <div class="buttons">
+                <button type="submit">Meowgle Search</button>
+                <button type="submit" name="btnI" value="1">I'm Feeling Meow</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bottom">
+        <a href="https://business.google.com">Advertising</a>
+        <a href="https://business.google.com">Business</a>
+        <a href="https://www.google.com/search/howsearchworks">How Search works</a>
+        <a href="https://policies.google.com/privacy">Privacy</a>
+        <a href="https://policies.google.com/terms">Terms</a>
+        <a href="https://www.google.com/settings">Settings</a>
+    </div>
+
+</body>
+</html>
